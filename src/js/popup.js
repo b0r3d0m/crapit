@@ -31,7 +31,7 @@ $(function() {
   }).appendTo('#url-container');
 
   $('#cr-form').submit(function() {
-    chrome.storage.sync.get({
+    chrome.storage.local.get({
       webhookUrl: ''
     }, function(items) {
       const selectedEmoji = $('.image-picker').data('picker').selected_values()[0];

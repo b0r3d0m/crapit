@@ -2,7 +2,7 @@
 
 function saveOptions(callback) {
   const webhookUrl = $('#webhook-url').val();
-  chrome.storage.sync.set({
+  chrome.storage.local.set({
     webhookUrl: webhookUrl
   }, function() {
     callback();
@@ -10,7 +10,7 @@ function saveOptions(callback) {
 }
 
 function restoreOptions() {
-  chrome.storage.sync.get({
+  chrome.storage.local.get({
     webhookUrl: ''
   }, function(items) {
     $('#webhook-url').val(items.webhookUrl);
