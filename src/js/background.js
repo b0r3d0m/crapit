@@ -20,7 +20,6 @@ chrome.contextMenus.create({
              '&title=' + encodeURIComponent(tab.title) +
              '&favicon=' + encodeURIComponent(tab.favIconUrl),
         type: 'popup',
-        focused: true,
         state: 'maximized'
       });
     });
